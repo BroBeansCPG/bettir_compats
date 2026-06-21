@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "macros.hpp"
 
 class CfgPatches {
     class ADDON {
@@ -8,12 +9,22 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "cba_main",
-            "bettIR_compats_main"
+            "bettir_attachments",
+            "bettIR_compats_main",
+            "Tier1_Weapons_cfg"
         };
-        author = "flufflesamy";
+        author = "BroBeans";
         VERSION_CONFIG;
     };
 };
 
-// INCLUDE CONFIGS HERE
 #include "CfgEventHandlers.hpp"
+
+class BettIR_Config {
+    class CompatibleAttachments {
+        // provide some inheritance information
+        #include "bettirconfigs/bettir_inheritence.hpp"
+    };
+};
+
+#include "bettirconfigs/NGAL.hpp"
