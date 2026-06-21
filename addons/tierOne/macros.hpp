@@ -28,6 +28,7 @@
     class BASECLASS##_visAH: BASECLASS {}; \
     class BASECLASS##_visAL: BASECLASS {}; \
     class BASECLASS##_AL: BASECLASS {};  \
+    class BASECLASS##_FL: BASECLASS {};  \
     class BASECLASS##_DL_25MRAD: BASECLASS {};  \
     class BASECLASS##_IH_25MRAD: BASECLASS {};  \
     class BASECLASS##_DH_25MRAD: BASECLASS {};  \
@@ -66,6 +67,7 @@
     class BASECLASS##_visAH: BASECLASS {}; \
     class BASECLASS##_visAL: BASECLASS {}; \
     class BASECLASS##_AL: BASECLASS {};  \
+    class BASECLASS##_FL: BASECLASS {};  \
     class BASECLASS##_DL_25MRAD: BASECLASS {};  \
     class BASECLASS##_IH_25MRAD: BASECLASS {};  \
     class BASECLASS##_DH_25MRAD: BASECLASS {};  \
