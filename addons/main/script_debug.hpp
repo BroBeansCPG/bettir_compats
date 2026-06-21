@@ -13,7 +13,7 @@
 #endif
 
 // Fast Recompiling via function
-// To Use: [] call ADDON_PREP_RECOMPILE; where ADDON is your prefix, e.g. TUT
+// To Use: [] call ADDON_PREP_RECOMPILE; where ADDON is your prefix, e.g. bettIR_compats
 #ifdef DISABLE_COMPILE_CACHE
     #define LINKFUNC(x) {call FUNC(x)}
     #define PREP_RECOMPILE_START    if (isNil QUOTE(DOUBLES(ADDON,PREP_RECOMPILE))) then {DOUBLES(ADDON,RECOMPILES) = []; DOUBLES(ADDON,PREP_RECOMPILE) = {{call _x} forEach DOUBLES(ADDON,RECOMPILES);}}; private _recomp = {

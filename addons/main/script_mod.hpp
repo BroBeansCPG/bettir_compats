@@ -1,6 +1,6 @@
 #define MAINPREFIX z
 // Set your prefix here.
-#define PREFIX tut
+#define PREFIX bettir_compats
 #define SUBPREFIX addons
 
 // Enables debug mode. Comment out on release.
@@ -13,7 +13,7 @@
 
 // Set your addon display name here.
 #ifdef COMPONENT_BEAUTIFIED
-    #define COMPONENT_NAME QUOTE(CBA Tutorial - COMPONENT_BEAUTIFIED)
+    #define COMPONENT_NAME QUOTE(BettIR Compat - COMPONENT_BEAUTIFIED)
 #else
-    #define COMPONENT_NAME QUOTE(CBA Tutorial - COMPONENT)
+    #define COMPONENT_NAME QUOTE(BettIR Compat - COMPONENT)
 #endif

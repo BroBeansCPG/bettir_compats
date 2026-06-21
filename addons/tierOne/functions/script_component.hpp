@@ -1,0 +1,1 @@
+#include "\z\bettir_compats\addons\tierOne\script_component.hpp"

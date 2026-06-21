@@ -7,16 +7,17 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "cba_main"
+            "cba_main",
+            "bettIR_attachments"
         };
-        author = "flufflesamy";
+        author = "BroBeans";
         VERSION_CONFIG;
     };
 };
 
 class CfgMods {
     class PREFIX {
-        dir = "@tut"; // Set your addon directory name here.
-        name = "CBA Tutorial"; // Set your addon name here.
+        dir = "@bettIR_compats"; // Set your addon directory name here.
+        name = "BettIR Compats"; // Set your addon name here.
     };
 };

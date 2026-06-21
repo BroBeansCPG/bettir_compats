@@ -8,7 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "cba_main",
-            "tut_main"
+            "bettIR_compats_main"
         };
         author = "flufflesamy";
         VERSION_CONFIG;
