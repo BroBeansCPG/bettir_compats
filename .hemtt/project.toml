@@ -1,0 +1,18 @@
+# This configuration file is required for all HEMTT projects.
+# See https://hemtt.dev/ for full documentation.
+
+name = "CBA Tutorial"
+author = "flufflesamy"
+prefix = "TUT"
+mainprefix = "z"
+
+# Configures what files (other than your mod) will be included in the final build.
+[files]
+include = [
+    "LICENSE",
+    "README.md"
+]
+
+# Configures whether git hash will be included in version numbers.
+[version]
+git_hash = 0

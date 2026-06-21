@@ -1,0 +1,16 @@
+# HEMTT launch configuration file. Will be used on "hemtt launch" command.
+# See https://hemtt.dev/commands/launch.html for full documentation.
+
+[default]
+# List of workshop mods to add.
+workshop = [
+    "450814997" # CBA
+]
+# List of mod presets to use.
+presets = []
+# Can add mission file here to launch in eden.
+# mission = "addons\\missions\\MyMission.Stratis"
+
+# "hemtt launch example"
+[example]
+extends = "default" # Launch configs can inherit from others.
