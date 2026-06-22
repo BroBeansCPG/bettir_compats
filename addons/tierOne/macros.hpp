@@ -93,9 +93,9 @@
         BASECLASS##_DL_50MRAD=1;  \
         BASECLASS##_IH_50MRAD=1;  \
         BASECLASS##_DH_50MRAD=1;  \
-        BASECLASS##_DL_100MRAD=1;  \
-        BASECLASS##_IH_100MRAD=1;  \
-        BASECLASS##_DH_100MRAD=1;  
+        BASECLASS##_DL_105MRAD=1;  \
+        BASECLASS##_IH_105MRAD=1;  \
+        BASECLASS##_DH_105MRAD=1;  
 
 #define TIERONE_RAILS_NGAL_FL(BASECLASS) \
         BASECLASS##=1; \
@@ -109,9 +109,9 @@
         BASECLASS##_DL_50MRAD=1;  \
         BASECLASS##_IH_50MRAD=1;  \
         BASECLASS##_DH_50MRAD=1;  \
-        BASECLASS##_DL_100MRAD=1;  \
-        BASECLASS##_IH_100MRAD=1;  \
-        BASECLASS##_DH_100MRAD=1;  
+        BASECLASS##_DL_105MRAD=1;  \
+        BASECLASS##_IH_105MRAD=1;  \
+        BASECLASS##_DH_105MRAD=1;  
 
 #define TIERONE_RAILS_LA5(BASECLASS) \
         BASECLASS##=1; \
