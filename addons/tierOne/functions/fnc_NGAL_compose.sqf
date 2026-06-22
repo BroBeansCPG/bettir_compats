@@ -6,7 +6,7 @@ _macro = _composableMap get "__BETTIR_MACRO";
 _device = _composableMap get "Device";
 
 // if the device is flashlight, in our case it's the same as the macroClass + "_light" suffix
-if (_device == "Flashlight") exitWith { (_macro + "_fl") };
+//if (_device == "Flashlight") exitWith { (_macro + "_fl") };
 
 // as mentioned above, Aim High mode is not listed in the className, and the macro matches the base class anyways
 if (_masterMode == "AH") exitWith { _macro };

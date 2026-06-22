@@ -22,9 +22,16 @@ class CfgPatches {
 
 class BettIR_Config {
     class CompatibleAttachments {
-        // provide some inheritance information
         #include "bettirconfigs/bettir_inheritence.hpp"
+        #include "bettirconfigs/NGAL.hpp"
+        #include "bettirconfigs/LA5.hpp"
     };
 };
 
-#include "bettirconfigs/NGAL.hpp"
+class cfgWeapons {
+    #include "cfgWeapons/inheritence.hpp"
+    #include "cfgWeapons/NGAL.hpp"
+    #include "cfgWeapons/LA5.hpp"
+};
+
+#include "rails/rails.hpp"
