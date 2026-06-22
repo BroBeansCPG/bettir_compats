@@ -2,6 +2,7 @@
 
 #define TIERONE_CONFIG_NGAL(BASECLASS) \
     class BASECLASS: bettir_base_ngal { \
+        macroClass = QUOTE(BASECLASS); \
         classParser="bettir_compats_tierOne_fnc_NGAL_parse"; \
         classComposer="bettir_compats_tierOne_fnc_NGAL_compose"; \
         class configurable; \
@@ -21,6 +22,7 @@
 
 #define TIERONE_CONFIG_NGAL_FL(BASECLASS) \
     class BASECLASS: bettir_base_ngal_genericflashlightcombo { \
+        macroClass = QUOTE(BASECLASS); \
         classParser="bettir_compats_tierOne_fnc_NGAL_parse"; \
         classComposer="bettir_compats_tierOne_fnc_NGAL_compose"; \
         class configurable; \
@@ -41,6 +43,7 @@
 
 #define TIERONE_CONFIG_LA5(BASECLASS) \
     class BASECLASS: bettir_base_peq15 { \
+        macroClass = QUOTE(BASECLASS); \
         classParser="bettir_compats_tierOne_fnc_LA5_parse"; \
         classComposer="bettir_compats_tierOne_fnc_LA5_compose"; \
         class configurable; \
@@ -62,6 +65,7 @@
 
 #define TIERONE_CONFIG_LA5_FL(BASECLASS) \
     class BASECLASS: bettir_base_peq15_genericflashlightcombo { \
+        macroClass = QUOTE(BASECLASS); \
         classParser="bettir_compats_tierOne_fnc_LA5_parse"; \
         classComposer="bettir_compats_tierOne_fnc_LA5_compose"; \
         class configurable; \
