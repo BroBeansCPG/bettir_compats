@@ -16,6 +16,9 @@
     class BASECLASS##_DL_50MRAD: BASECLASS {};  \
     class BASECLASS##_IH_50MRAD: BASECLASS {};  \
     class BASECLASS##_DH_50MRAD: BASECLASS {};  \
+    class BASECLASS##_DL_75MRAD: BASECLASS {};  \
+    class BASECLASS##_IH_75MRAD: BASECLASS {};  \
+    class BASECLASS##_DH_75MRAD: BASECLASS {};  \
     class BASECLASS##_DL_105MRAD: BASECLASS {}; \
     class BASECLASS##_IH_105MRAD: BASECLASS {}; \
     class BASECLASS##_DH_105MRAD: BASECLASS {}; 
@@ -37,6 +40,9 @@
     class BASECLASS##_DL_50MRAD: BASECLASS {};  \
     class BASECLASS##_IH_50MRAD: BASECLASS {};  \
     class BASECLASS##_DH_50MRAD: BASECLASS {};  \
+    class BASECLASS##_DL_75MRAD: BASECLASS {}; \
+    class BASECLASS##_IH_75MRAD: BASECLASS {};  \
+    class BASECLASS##_DH_75MRAD: BASECLASS {};  \
     class BASECLASS##_DL_105MRAD: BASECLASS {}; \
     class BASECLASS##_IH_105MRAD: BASECLASS {}; \
     class BASECLASS##_DH_105MRAD: BASECLASS {}; 
@@ -241,7 +247,7 @@
         class ItemInfo: ItemInfo { \
             class Pointer; \
             class Flashlight: Flashlight { \
-                BETTIR_ILLUMINATOR_PRESET_PEQ15(##MRAD##,"laser pos","laser dir",0) \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(##MRAD##,"laser_pos","laser_dir",0) \
             }; \
         }; \
     }; 
@@ -287,15 +293,142 @@
         }; \
     }; \
  \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DL,25) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,IH,25) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DH,25) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DL,50) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,IH,50) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DH,50) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DL,105) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,IH,105) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DH,105) 
+    class BASECLASS##_DL_25MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2_LO \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(25,"laser_pos","laser_dir",0) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DL_50MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2_LO \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(50,"laser_pos","laser_dir",0) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DL_75MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2_LO \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(75,"laser_pos","laser_dir",0) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DL_105MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2_LO \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(105,"laser_pos","laser_dir",0) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DH_25MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2 \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(25,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DH_50MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2 \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(50,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DH_75MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2 \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(75,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DH_105MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2 \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(105,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_IH_25MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer {}; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(25,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_IH_50MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer {}; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(50,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_IH_75MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer {}; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(75,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_IH_105MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer {}; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(105,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
 
 #define TIERONE_CFG_WEAPONS_NGAL_FL(BASECLASS) \
     class BASECLASS: acc_pointer_IR { \
@@ -306,7 +439,7 @@
             }; \
         }; \
     }; \
- \
+\
     class BASECLASS##_al: BASECLASS { \
         scope = 1; \
         scopeArsenal = 1; \
@@ -317,15 +450,6 @@
         }; \
     }; \
  \
-    class BASECLASS##_FL: acc_pointer_IR { \
-        scope = 1; \
-        scopeArsenal = 1; \
-        class itemInfo: itemInfo { \
-            class pointer: pointer { \
-                BETTIR_IR_LASER_PRESET_DBAL_A2_LO \
-            }; \
-        }; \
-    }; \
     class BASECLASS##_visAH: BASECLASS { \
         scope = 1; \
         scopeArsenal = 1; \
@@ -345,18 +469,146 @@
             }; \
         }; \
     }; \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DL,25) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,IH,25) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DH,25) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DL,50) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,IH,50) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DH,50) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DL,105) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,IH,105) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DH,105)
+ \
+    class BASECLASS##_DL_25MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2_LO \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(25,"laser_pos","laser_dir",0) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DL_50MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2_LO \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(50,"laser_pos","laser_dir",0) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DL_75MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2_LO \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(75,"laser_pos","laser_dir",0) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DL_105MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2_LO \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(105,"laser_pos","laser_dir",0) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DH_25MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2 \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(25,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DH_50MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2 \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(50,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DH_75MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2 \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(75,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DH_105MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2 \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(105,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_IH_25MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer {}; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(25,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_IH_50MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer {}; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(50,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_IH_75MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer {}; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(75,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_IH_105MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer {}; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(105,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
 
 #define TIERONE_CFG_WEAPONS_LA5(BASECLASS) \
-    class BASECLASS: acc_pointer_IR { \
+     class BASECLASS: acc_pointer_IR { \
         scope = 2; \
         class itemInfo: itemInfo { \
             class pointer: pointer { \
@@ -364,7 +616,7 @@
             }; \
         }; \
     }; \
- \
+\
     class BASECLASS##_al: BASECLASS { \
         scope = 1; \
         scopeArsenal = 1; \
@@ -384,22 +636,145 @@
             }; \
         }; \
     }; \
- \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DL,25) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,IH,25) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DH,25) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DL,50) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,IH,50) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DH,50) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DL,75) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,IH,75) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DH,75) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DL,100) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,IH,100) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DH,100)
+    class BASECLASS##_DL_25MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2_LO \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(25,"laser_pos","laser_dir",0) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DL_50MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2_LO \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(50,"laser_pos","laser_dir",0) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DL_75MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2_LO \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(75,"laser_pos","laser_dir",0) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DL_100MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2_LO \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(100,"laser_pos","laser_dir",0) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DH_25MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2 \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(25,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DH_50MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2 \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(50,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DH_75MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2 \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(75,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DH_100MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2 \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(100,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_IH_25MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer {}; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(25,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_IH_50MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer {}; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(50,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_IH_75MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer {}; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(75,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_IH_100MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer {}; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(100,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
 
 #define TIERONE_CFG_WEAPONS_LA5_FL(BASECLASS) \
-    class BASECLASS: acc_pointer_IR { \
+     class BASECLASS: acc_pointer_IR { \
         scope = 2; \
         class itemInfo: itemInfo { \
             class pointer: pointer { \
@@ -407,18 +782,8 @@
             }; \
         }; \
     }; \
- \
+\
     class BASECLASS##_al: BASECLASS { \
-        scope = 1; \
-        scopeArsenal = 1; \
-        class itemInfo: itemInfo { \
-            class pointer: pointer { \
-                BETTIR_IR_LASER_PRESET_DBAL_A2_LO \
-            }; \
-        }; \
-    }; \
- \
-    class BASECLASS##_FL: acc_pointer_IR { \
         scope = 1; \
         scopeArsenal = 1; \
         class itemInfo: itemInfo { \
@@ -438,15 +803,139 @@
         }; \
     }; \
  \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DL,25) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,IH,25) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DH,25) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DL,50) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,IH,50) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DH,50) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DL,75) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,IH,75) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DH,75) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DL,100) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,IH,100) \
-    TIERONE_WEAPONCONFIG_MRAD(##BASECLASS##,DH,100)
+    class BASECLASS##_DL_25MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2_LO \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(25,"laser_pos","laser_dir",0) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DL_50MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2_LO \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(50,"laser_pos","laser_dir",0) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DL_75MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2_LO \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(75,"laser_pos","laser_dir",0) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DL_100MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2_LO \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(100,"laser_pos","laser_dir",0) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DH_25MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2 \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(25,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DH_50MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2 \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(50,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DH_75MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2 \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(75,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_DH_100MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer: pointer { \
+                BETTIR_IR_LASER_PRESET_DBAL_A2 \
+            }; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(100,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_IH_25MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer {}; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(25,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_IH_50MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer {}; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(50,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_IH_75MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer {}; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(75,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
+    class BASECLASS##_IH_100MRAD: BASECLASS { \
+        scope = 1; \
+        scopeArsenal = 1; \
+        class itemInfo: itemInfo { \
+            class pointer {}; \
+            class flashlight: flashlight { \
+                BETTIR_ILLUMINATOR_PRESET_PEQ15(100,"laser_pos","laser_dir",1) \
+            }; \
+        }; \
+    }; \
